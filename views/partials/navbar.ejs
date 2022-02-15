@@ -1,0 +1,14 @@
+<div id="overlay"></div>
+<div id="searchPopUp" class="py-2 px-2 w-full" >
+  <div class="flex justify-between"><span>What are you Looking for ?</span> <span id="hidesearchPopup"> &times; </span></div>
+  <div class="search_container w-full "><input type="search" name="search" class=" border w-[80%]" id=""> <button type="submit" class="border" >search</button></div>
+</div>
+
+<nav class="flex flex-row pt-3 pb-1 px-4 theme-color text-white ">
+  <div class="navbar-brand font-bold text-2xl">LOGO</div>
+  <div class="right flex flex-row ml-auto">
+    <button id="search_btn" class="cart flex flex-row mt-3 relative"><i class="fas fa-search " style="font-size: 20px;" ></i></button>
+    <a href="/cart" class="cart flex flex-row mt-3 relative"><i class="fas fa-user " style="font-size: 20px;" ></i></a>
+    <a href="/cart" class="cart flex flex-row mt-3 relative"><span class="cart_number" id="totalcart"><%= session.cart ? session.cart.totalQty : '0' %></span><i class="fas fa-shopping-cart " style="font-size: 20px;" ></i></a>
+  </div>
+</nav>
