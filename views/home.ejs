@@ -12,10 +12,9 @@
                    <a href="#" class="mr-1" ><i class="fas fa-angle-right text-color"></i></a>
                 </div>
                 <div class="container mx-auto">
-                    <div id="owl-two" class="owl-carousel owl-theme">
+                    <div  class="grid grid-cols-2 md:grid-cols-6">
                         <% if(products){products.forEach(product=> {%>
-                            <% if(product.tag=='new' ){%>
-                                <div class="flex flex-col border px-2 py-2">
+                                <div class="flex flex-col border px-2 py-2 ">
                                     <div class="img w-full py-1 px-2">
                                         <a href="product/<%= product._id %>"><img src="<%= product.thumbnail %>" class=" "
                                                 alt=""></a>
@@ -36,7 +35,6 @@
                                     </div>
                                     <button type="submit" data-item ='<%= JSON.stringify(product) %>' class="py-1 px-3 border cart  bg-gray-500"> cart</button>
                                 </div>
-                                <% } %>
                                     <% })}%>
                     </div>
                 </div>

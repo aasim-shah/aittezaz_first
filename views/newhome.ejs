@@ -1,34 +1,61 @@
 <%- include('./partials/header.ejs') %>
     <%- include('./partials/navbar.ejs') %>
 <section>
-    <div id="owl-one" class="owl-carousel owl-theme w-full">
-        <div class="bg-blue-300 h-24 ml-2">image 1</div>
-        <div class="bg-blue-300 h-24 ml-2">image 2</div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col col-md-4 px-2 py-2">
-                <div class="card w-[100%]" id="single_card">
-                    <div class="card_overlay w-full"></div>
-                    <img src="images/1643736748184-264469368-close.png" alt="">
-                    <div class="ctb">shopnow</div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+<div class="hero_text grid grid-flow-row grid-cols-1 md:grid-cols-2">
+   <div class="hero_text">
+       <div id="typed-strings " class="my-4"> <span>WE Help in Writing :</span> <span id="typed" class="font-bold text-3xl "></span></div>
+       <p class="text-lg">why us ?</p>
+   </div>
+   <div class="logo">
+    <h1 class="hidden md:flex">hellow bro</h1>
+</div>
 </section>
+<section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
+<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
+    <i class="fa-solid fa-hand-holding-dollar text-white absolute icon_size" ></i>
+    </div>
+    <p class="text-md font-bold text-center my-2 ">100% Refund Policy</p>
+</div>
+<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
+    <i class="fa-solid fa-list-check text-white absolute icon_size" ></i>
+    </div>
+    <p class="text-md font-bold text-center my-2 ">100% Genuen Writing</p>
+</div>
 
-       
-        <%- include('./partials/footer.ejs') %>
-        <script>
-            $(document).ready(function () {
-                $('#owl-one').owlCarousel({
-                    items: 1,
-                    loop: true,
-                })
+<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
+    <i class="fa-solid fa-headset text-white absolute icon_size" ></i>
+    </div>
+    <p class="text-md font-bold text-center my-2 ">24/7 Customer Support</p>
+</div>
+
+<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
+    <i class="fa-solid fa-recycle text-white absolute icon_size" ></i>
+    </div>
+    <p class="text-md font-bold text-center my-2 ">Free Revisions</p>
+</div>
 
 
-            });
-        </script>
+</section>    
+<%- include('./partials/footer.ejs') %>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+ var typed = new Typed('#typed', {
+  strings: [
+    'ESSAY',
+    'RESEARCH',
+    'THESIS',
+    'ASSIGNMENTS',
+    'CASE STUDY',
+    'ARTICLES',
+    'BLOG POSTS',
+    'RESUME',
+  ],
+  typeSpeed: 50,
+  backSpeed: 80,
+  loop: true
+});
+</script>

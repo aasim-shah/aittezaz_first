@@ -7,9 +7,7 @@ import categoryModel from "../models/categoryModel.js";
 import {transporter , generateOtp} from '../middlewares/nodemailer.js'
 class apps {
      async   home(req ,res) {
-        const products = await productModel.find()
-        const categories = await categoryModel.find()
-      res.render('home' , {products , categories  , messages: req.flash('info') })
+      res.render('newhome')
     }
     async  registering(req ,res) {
        const {username , email , password} = req.body;
@@ -100,39 +98,6 @@ class apps {
     //    res.render('home')
      }
 
-
-
-     async get_cart(req , res)  {
-        console.log(req.session.cart)
-        res.render('cartpage' , {d : req.session.cart})
-      }
-  
-    async post_addtocart(req ,res){
-        console.log('post_addtoacrt')
-        if(!req.session.cart){
-          req.session.cart = {
-            items : {},
-            totalQty : 0,
-            totalPrice : 0
-          }
-        }
-        let cart = req.session.cart
-      if(!cart.items[req.body._id]){
-      cart.items[req.body._id] = {
-        item : req.body,
-        Qty : 1,
-      }
-        cart.totalQty = cart.totalQty + 1
-      
-      }else{
-        cart.items[req.body._id].Qty = cart.items[req.body._id].Qty + 1
-        cart.totalQty = cart.totalQty + 1
-      }
-      req.flash('info', 'Flash is back!')
-      res.send({totalQty: req.session.cart.totalQty})
-      
-      }
- 
      async  logout(req ,res) {
          res.clearCookie('jwt_Token')
          res.redirect('/login')

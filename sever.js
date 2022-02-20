@@ -1,15 +1,13 @@
 import express , {urlencoded} from 'express'
 import ejs from 'ejs'
 import userRoute from './routes/user_route.js'
-import productRoute from './routes/product_route.js'
-import categoryRoute from './routes/category_route.js'
 import apps from './controllers/appController.js'
 import passport  from 'passport';
 import  Jwt from 'jsonwebtoken';
 import flash from 'connect-flash'
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
-
+import Razorpay from "razorpay"
 import bcrypt from 'bcrypt'
 import Stripe  from 'stripe'
 const stripe = Stripe('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
@@ -19,6 +17,10 @@ import cookieParser from 'cookie-parser';
 import multer from 'multer'
 import jwtAuth from './middlewares/jwtauth.js'
 const local = passportLocal.Strategy
+const instance = new Razorpay({
+  key_id : "rzp_test_IqpKKCt3Rb3DJQ",
+  key_secret : "o2STvxx3SZNKDUkVd5O0Dh8z"
+})
 const app = express()
 let  auth = new jwtAuth()
 let  isAdmin = auth.isAdmin
@@ -41,7 +43,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 app.use(express.static('./public'))
-app.use('/product' , express.static('./public'))
 app.use('/user' , express.static('./public'))
 app.use('/user/admin' , express.static('./public'))
 app.set('view engine' , 'ejs')
@@ -94,14 +95,8 @@ passport.serializeUser(function(user, done) {
 
 app.get('/' , home.home)
 app.use('/user' , userRoute)
-app.use('/product' , productRoute)
-app.use('/category' , categoryRoute)
 
-app.post('/profile', upload.single('avatar'), function (req, res, next) {
-  res.redirect('/');
-  // req.file is the `avatar` file
-  // req.body will hold the text fields, if there were any
-})
+
 
 app.get('/register', home.registered);
 app.post('/register', home.registering);
@@ -111,8 +106,6 @@ home.login_post
 );
 
 
-app.get('/cart' ,  home.get_cart)
-app.post('/addtocart', home.post_addtocart)
 
 app.get('/getotp'  , home.get_otp_get)
 app.post('/getotp'  , home.get_otp_post)

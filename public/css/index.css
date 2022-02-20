@@ -112,6 +112,11 @@ a:hover {
     left: 10%;
     width: 20%;
 }
+.icon_size{
+    bottom: 25%;
+    left: 31px;
+    font-size: 68px;
+}
 
 @media only screen and (max-width: 500px) {
     .search{

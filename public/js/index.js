@@ -7,4 +7,11 @@ $( document ).ready(function() {
         $('#searchPopUp').removeClass('active')
         $('#overlay').css({display : 'none'})
     })
+    $("#btn_toggle").on("click" , ()=>{
+        
+        $("#ss").toggle()
+        $("#ee").toggle()
+        $("#toggle_nav").toggle()
+
+    })
 });

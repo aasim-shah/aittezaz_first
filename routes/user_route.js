@@ -34,6 +34,6 @@ const storage = multer.diskStorage({
 
 router.get('/admin' ,Tokenauth, isAdmin , admin.home)
 router.get('/admin/add_product' ,Tokenauth, isAdmin , admin.add_product_get)
-router.post('/admin/add_product', upload.single('product_image'), admin.add_product_post)
+router.post('/admin/add_product', upload.single('product_image'), upload.array('images' , 10) , admin.add_product_post)
 
 export default router;
