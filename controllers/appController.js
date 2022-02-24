@@ -44,7 +44,9 @@ class apps {
      async  registered(req ,res) {
          res.render('register')
       }
-
+      async  getContact(req ,res) {
+        res.render('contact')
+     }
       async  get_otp_get(req ,res) {
         res.render('getotp')
      }

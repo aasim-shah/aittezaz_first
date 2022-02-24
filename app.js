@@ -98,6 +98,7 @@ app.use('/user' , userRoute)
 
 
 
+app.get('/contact', home.getContact);
 app.get('/register', home.registered);
 app.post('/register', home.registering);
 app.get('/login', home.login_get);

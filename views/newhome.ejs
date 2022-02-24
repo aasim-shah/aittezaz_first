@@ -1,61 +1,114 @@
 <%- include('./partials/header.ejs') %>
     <%- include('./partials/navbar.ejs') %>
-<section>
-<div class="hero_text grid grid-flow-row grid-cols-1 md:grid-cols-2">
-   <div class="hero_text">
-       <div id="typed-strings " class="my-4"> <span>WE Help in Writing :</span> <span id="typed" class="font-bold text-3xl "></span></div>
-       <p class="text-lg">why us ?</p>
-   </div>
-   <div class="logo">
-    <h1 class="hidden md:flex">hellow bro</h1>
-</div>
-</section>
-<section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
-<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
-    <i class="fa-solid fa-hand-holding-dollar text-white absolute icon_size" ></i>
-    </div>
-    <p class="text-md font-bold text-center my-2 ">100% Refund Policy</p>
-</div>
-<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
-    <i class="fa-solid fa-list-check text-white absolute icon_size" ></i>
-    </div>
-    <p class="text-md font-bold text-center my-2 ">100% Genuen Writing</p>
-</div>
+        <section>
+            <div class="hero_text grid grid-flow-row grid-cols-1 md:grid-cols-2">
+                <div class="hero_text">
+                    <div id="typed-strings " class="my-4">
+                        <p class="font-bold text-3xl"></p>
+                        <p id="typed" class="font-bold text-3xl  text-center h-12 text-[#1b679b]"></p>
+                    </div>
+                    <p class="text-lg text-center font-bold text-gray-500">why us ?</p>
 
-<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
-    <i class="fa-solid fa-headset text-white absolute icon_size" ></i>
-    </div>
-    <p class="text-md font-bold text-center my-2 ">24/7 Customer Support</p>
-</div>
+                </div>
+                <div class="logo">
+                    <h1 class="hidden md:flex">hellow bro</h1>
+                </div>
+        </section>
+        <div class="whyus grid grid-flow-coll container mx-auto grid-cols-4 gap-1 my-2">
+            <div class="card flex flex-col text-center rounded-md p-2 pt-2">
+                <span><i class="fa-solid fa-user-group fa-3x"></i></span>
+                <span class="font-bold text-sm">Team work</span>
+            </div>
+            <div class="card flex flex-col justify-center text-center rounded-md p-2">
+                <span><i class="fa-solid fa-arrow-rotate-left fa-3x"></i></span>
+                <span class="font-bold text-sm">Efficency</span>
+            </div>
+            <div class="card flex flex-col justify-center text-center rounded-md p-2">
+                <span><i class="fa-solid fa-chart-line fa-3x"></i></span>
+                <span class="font-bold text-sm">Quality</span>
+            </div>
+            <div class="card flex flex-col justify-center text-center rounded-md p-2">
+                <span><i class="fa-solid fa-headset fa-3x"></i></span>
+                <span class="font-bold text-sm">LIVE Support</span>
+            </div>
 
-<div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">    
-    <i class="fa-solid fa-recycle text-white absolute icon_size" ></i>
-    </div>
-    <p class="text-md font-bold text-center my-2 ">Free Revisions</p>
-</div>
+        </div>
+        <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
+            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
+                    <i class="fa-solid fa-hand-holding-dollar text-white absolute icon_size"></i>
+                </div>
+                <p class="text-md font-bold text-center my-2 ">100% Refund Policy</p>
+            </div>
+            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
+                    <i class="fa-solid fa-list-check text-white absolute icon_size"></i>
+                </div>
+                <p class="text-md font-bold text-center my-2 ">100% Genuen Writing</p>
+            </div>
+
+            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
+                    <i class="fa-solid fa-headset text-white absolute icon_size"></i>
+                </div>
+                <p class="text-md font-bold text-center my-2 ">24/7 Customer Support</p>
+            </div>
+
+            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
+                    <i class="fa-solid fa-recycle text-white absolute icon_size"></i>
+                </div>
+                <p class="text-md font-bold text-center my-2 ">Free Revisions</p>
+            </div>
 
 
-</section>    
-<%- include('./partials/footer.ejs') %>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
- var typed = new Typed('#typed', {
-  strings: [
-    'ESSAY',
-    'RESEARCH',
-    'THESIS',
-    'ASSIGNMENTS',
-    'CASE STUDY',
-    'ARTICLES',
-    'BLOG POSTS',
-    'RESUME',
-  ],
-  typeSpeed: 50,
-  backSpeed: 80,
-  loop: true
-});
-</script>
+        </section>
+
+
+        <section class="services my-4">
+            <h2 class="text-blue-400 text-center my-3">OUR SERVICES</h2>
+            <div class="flex flex-col  container mx-auto">
+                <div class="text-center w-full h-12">
+                    <a href="" class="py-2 px-4 theme-color text-white font-bold  rounded-md ">BLOG POSTS</a>
+                </div>
+
+                <div class="text-center w-full h-12">
+                    <a href="" class="py-2 px-4 theme-color text-white font-bold  rounded-md">RESEARCH</a>
+                    <a href="" class="py-2 px-4 theme-color text-white font-bold  rounded-md">CASE STUDY</a>
+                </div>
+
+                <div class="text-center w-full h-12">
+                    <a href="" class="py-2 px-[30px] theme-color text-white font-bold  rounded-md">ESSAY</a>
+                    <a href="" class="py-2 px-[30px] theme-color text-white font-bold  rounded-md">THESIS</a>
+                    <a href="" class="py-2 px-[30px] theme-color text-white font-bold  rounded-md">RESUME</a>
+                </div>
+
+                <div class="text-center w-full h-12">
+                    <a href="" class="py-2 px-4 theme-color text-white font-bold  rounded-md">ARTICLES</a>
+                    <a href="" class="py-2 px-4 theme-color text-white font-bold  rounded-md">POST CONTENT</a>
+                </div>
+
+                <div class="text-center w-full h-12">
+                    <a href="" class="py-2 px-4 theme-color text-white font-bold rounded-md">ASSIGNMENTS</a>
+                </div>
+            </div>
+        </section>
+        <%- include('./partials/footer.ejs') %>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            <script>
+                var typed = new Typed('#typed', {
+                    strings: [
+                        '  ESSAY',
+                        '  RESEARCH',
+                        '  THESIS',
+                        '  ASSIGNMENTS',
+                        '  CASE STUDY',
+                        '  ARTICLES',
+                        '  BLOG POSTS',
+                        '  RESUME',
+                    ],
+                    typeSpeed: 50,
+                    backSpeed: 80,
+                    loop: true
+                });
+            </script>

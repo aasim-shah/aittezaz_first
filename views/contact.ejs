@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<div class="container w-72  my-20">
+    <h3 class="text-center text-gray-500">Leave a Message ! we will get you back soon :)</h3>
+    <form action="/contact" method="post" class="">
+        <input type="text"class=" border_bb px-2 py-2 w-64 w-68" placeholder="Full Name " name="username">
+        <input type="email" class=" border_bb px-2 py-2 mt-2 w-64 w-68" placeholder="Email" name="email">
+        <input type="text"class=" border_bb px-2 h-20  py-2 w-64 w-68" placeholder="Message .... " name="message">
+       <div class="d-flex justify-content-center my-4">
+        <button type="submit" class="font-bold text-white text-lg px-3 theme-color rounded-md">SEND</button>
+           </div>
+    </form>
+</div>
+
+
+
+<%- include('./partials/footer.ejs') %>
+
+
