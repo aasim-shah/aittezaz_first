@@ -1,9 +1,10 @@
 import userModel from "../models/userModel.js";
 import  Jwt  from 'jsonwebtoken';
 import cookieParser from "cookie-parser";
-import productModel from "../models/productModel.js";
+import orderModel from "../models/orderModel.js";
+import contactModel from "../models/contactModel.js";
+import subscribersModel from "../models/subscribersModel.js";
 import bcrypt from 'bcrypt'
-import categoryModel from "../models/categoryModel.js";
 import {transporter , generateOtp} from '../middlewares/nodemailer.js'
 class apps {
      async   home(req ,res) {
@@ -42,13 +43,45 @@ class apps {
          }
      }
      async  registered(req ,res) {
-         res.render('register')
-      }
+        res.render('register')
+     }
+     async  getBlog(req ,res) {
+        res.render('blogpage')
+     }
+
       async  getContact(req ,res) {
         res.render('contact')
      }
+     async  postContact(req ,res) {
+        const {fullname , email , message } = req.body;
+        const d = new contactModel({
+           fullname,
+           email,
+           message
+           
+        })
+        const saved_d = await d.save()
+        res.redirect('back')
+     }
       async  get_otp_get(req ,res) {
         res.render('getotp')
+     }
+     async  getOrder(req ,res) {
+        res.render('placeorder' , {msg : null})
+     }
+     async  postOrder(req ,res) {
+       const {name , email , phone , comment ,service , pages , delivery_date} = req.body;
+      const data = new orderModel({
+          name,
+          email,
+          phone,
+          comment,
+          service,
+          pages,
+            delivery_date
+      })
+      const saved_data = await data.save()
+      res.render('placeorder' , {msg : true})
      }
       async  get_otp_post(req ,res) {
         let otp = generateOtp()
@@ -72,6 +105,14 @@ class apps {
 
       async  verify_otp_get(req ,res) {
         res.render('otp' , {email : ""})
+     }
+      async  postSubscribe(req ,res) {
+        const email = req.body.email
+        const d = new subscribersModel({
+            email,
+        })
+        const saved_d = await d.save()
+        res.redirect('back')
      }
      async  verify_otp_post(req ,res , next) {
      const otp = req.body.otp;

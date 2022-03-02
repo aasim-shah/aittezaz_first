@@ -1,5 +1,4 @@
 import userModel from '../models/userModel.js'
-import productModel from '../models/productModel.js'
 class AdminController {
     home(req , res){
        res.render('admin/home')

@@ -1,0 +1,42 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<p class="text-lg text-center  mt-3 font-bold">Fill This Form To Order Our Services</p>
+<% if(msg){ %>
+<p class="alert alert-success  w-72 mx-auto text-center" role="alert">Your Ordered has been PLaced succesfully ! </p>
+<% } %>
+<div class="text-center mt-4" >
+    <form action="/place_order" method="post">
+        <input autocomplete="off" type="text"class=" border_bb px-2 py-2 w-64 w-68" placeholder="Full Name ...." name="name">
+        <input autocomplete="off" type="email" class=" border_bb px-2 py-2 mt-3 w-64 w-68" placeholder="Email" name="email">
+        <input autocomplete="off" type="number" class=" border_bb px-2 py-2 mt-3 w-64 w-68" placeholder="Phone " name="phone">
+        <input autocomplete="off" type="number" class=" border_bb px-2 py-2 mt-3 w-64 w-68" placeholder="Number of Pages.... " name="pages">
+        <select name="service" id="" class="border_bb px-2 py-2 mt-3 w-64 w-68">
+            <option value="">Select any of our service!</option>
+            <option value="content_writing">Content Writing</option>
+            <option value="assignment">Assignments</option>
+            <option value="blog_post">Blog Posts</option>
+            <option value="research">Research Work</option>
+            <option value="essay">Essay</option>
+            <option value="case_study">Case Study</option>
+            <option value="thesis">Thesis</option>
+            <option value="resume">Resume</option>
+            <option value="article">Article</option>
+
+        </select>
+        <input autocomplete="off" type="text" class=" border_bb px-2 py-3  w-64 w-68 mt-3 " placeholder="Additional Comment ..."  id="delivery_date" name="comment" >
+        <div class="flex flex-col mx-auto text-left   mt-3 w-64 w-68">
+            <label for="delivery_date " class="pl-1 text-blue-600">Delivery Date *</label>
+        <input type="date" class=" border_bb px-2 py-2 " placeholder="Delivery date"  id="delivery_date" name="delivery_date" >
+        </div>
+       <div class="d-flex justify-content-center my-4">
+        <button type="submit" class="font-bold text-white text-lg px-3 theme-color rounded-full">Order NOW</button>
+       </div>
+    </form>
+</div>
+
+
+
+<%- include('./partials/footer.ejs') %>
+
+

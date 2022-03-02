@@ -99,6 +99,9 @@ app.use('/user' , userRoute)
 
 
 app.get('/contact', home.getContact);
+app.get('/blog', home.getBlog);
+app.post('/subscribe', home.postSubscribe);
+app.post('/contact', home.postContact);
 app.get('/register', home.registered);
 app.post('/register', home.registering);
 app.get('/login', home.login_get);
@@ -108,6 +111,8 @@ home.login_post
 
 
 
+app.get('/place_order'  , home.getOrder)
+app.post('/place_order'  , home.postOrder)
 app.get('/getotp'  , home.get_otp_get)
 app.post('/getotp'  , home.get_otp_post)
 app.get('/verifyOtp'  , home.verify_otp_get)
