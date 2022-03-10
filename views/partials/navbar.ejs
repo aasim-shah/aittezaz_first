@@ -1,11 +1,29 @@
-<nav class="flex flex-col pt-3 pb-1 px-4 theme-color text-white ">
+<nav class="flex flex-col pt-3 pb-1 px-2 theme-color text-white ">
     <div class="container flex flex-row justify-between">
         <div class="logo"><a href="/">LOGO</a></div>
         <div class="right  hidden md:flex flex-row ">
-            <a href="/about" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">ABOUT</a>
-            <a href="/blog" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">BLOG</a>
-            <a href="/contact" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">CONTACT </a>
-            <a href="/login" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">LOGIN</a>
+            <a href="/about" class="mr-2 border-b-2 text-md  border-[#2176af]  hover:border-white ">About Us</a>
+            <a href="/blog" class="mr-2 border-b-2 text-md  border-[#2176af]  hover:border-white ">Blog </a>
+
+            <button class="mr-2 border-b-2 text-md  border-[#2176af]" type="button" id="btn" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Our Services
+        </button>
+        <div class="dropdown-menu theme-color" >
+            <ul>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Copy Writing</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Article Writing</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Blog Article</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Legal Research</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Research Help</a></li>
+                <li class=" w-full text-white hover:pl-2   "><a href="" class="pl-4">Essay</a></li>
+                
+                
+            </ul>
+        </div>
+
+            <a href="/contact" class="mr-2 border-b-2 text-md  border-[#2176af]  hover:border-white ">Contact </a>
+            <a href="/login" class="mr-2 border-b-2 text-md  border-[#2176af]  hover:border-white ">LOGIN</a>
         </div>
         <div class="right flex md:hidden" id="btn_toggle">
             <i class='fa-solid fa-bars ' id="ss"></i>
@@ -13,9 +31,29 @@
         </div>
     </div>
     <div class="right hidden   flex-row mt-2 text-center" id="toggle_nav">
-        <a href="/about" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">About</a>
-        <a href="/blog" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">Blog</a>
-        <a href="/contact" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">Contact </a>
-        <a href="/login" class="mr-2 border-b-2  border-[#2176af]  hover:border-white ">Login</a>
+        <a href="/about" class="mr-2 border-b-2 text-md  border-[#2176af]  hover:border-white ">About Us</a>
+        
+        <button class="mr-2 border-b-2 text-md  border-[#2176af]" type="button" id="btn" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Our Services
+        </button>
+        <div class="dropdown-menu theme-color" >
+            <ul>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Copy Writing</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Article Writing</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Blog Article</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Legal Research</a></li>
+                <li class=" w-full text-white hover:pl-2   border-b border-gray-400 py-1"><a href="" class="pl-3">Research Help</a></li>
+                <li class=" w-full text-white hover:pl-2   "><a href="" class="pl-4">Essay</a></li>
+                
+                
+            </ul>
+        </div>
+        
+        
+        <a href="/blog" class="mr-2 border-b-2 text-md  border-[#2176af]  hover:border-white ">Blog </a>
+        <a href="/login" class="mr-2 border-b-2 text-md  border-[#2176af]  hover:border-white ">Contact Us</a>
+        <!-- <a href="/login" class="mr-2 border-b-2  border-[#2176af]  hover:border-white "><i
+                class="fa-solid fa-user-plus "></i></a> -->
     </div>
 </nav>

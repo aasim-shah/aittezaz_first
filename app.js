@@ -6,6 +6,7 @@ import passport  from 'passport';
 import  Jwt from 'jsonwebtoken';
 import flash from 'connect-flash'
 import session from 'express-session';
+import { services } from './controllers/servicesController.js';
 import MongoStore from 'connect-mongo';
 import Razorpay from "razorpay"
 import bcrypt from 'bcrypt'
@@ -26,6 +27,7 @@ let  auth = new jwtAuth()
 let  isAdmin = auth.isAdmin
 const Tokenauth  = auth.Tokenauth
 const verifyOtp = auth.verifyOtp
+const service = services(app)
 
 var Publishable_Key = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'
 var Secret_Key = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'
@@ -44,6 +46,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 app.use(express.static('./public'))
 app.use('/user' , express.static('./public'))
+app.use('/services' , express.static('./public'))
 app.use('/user/admin' , express.static('./public'))
 app.set('view engine' , 'ejs')
 app.use(express.json())
@@ -105,9 +108,18 @@ app.post('/contact', home.postContact);
 app.get('/register', home.registered);
 app.post('/register', home.registering);
 app.get('/login', home.login_get);
-app.post('/login' , passport.authenticate('local', { failureRedirect: 'login' }),verifyOtp,
+app.post('/login' , passport.authenticate('local', { failureRedirect: 'login' }),
 home.login_post
 );
+app.get('/services', service.home)
+app.get('/services/article', service.getArticle)
+app.get('/services/assignment', service.getAssignment)
+app.get('/services/blog-post', service.getBlogpost)
+app.get('/services/case-study', service.getCasestudy)
+app.get('/services/essay', service.getEssay)
+app.get('/services/post-content', service.getPostcontent)
+app.get('/services/research', service.getResearch)
+app.get('/services/thesis', service.getThesis)
 
 
 
@@ -117,7 +129,7 @@ app.get('/getotp'  , home.get_otp_get)
 app.post('/getotp'  , home.get_otp_post)
 app.get('/verifyOtp'  , home.verify_otp_get)
 app.post('/verifyOtp'  , home.verify_otp_post)
-app.get('/dashboard' ,Tokenauth , home.dashboard_get)
+app.get('/dashboard' ,Tokenauth , verifyOtp, home.dashboard_get)
 app.get('/logout', Tokenauth,  home.logout);
 
 

@@ -30,7 +30,8 @@ class jwtAuth {
 
 
        verifyOtp = async (req ,res , next)=>{
-         const email = req.body.username;
+         const email = req.user.email;
+         console.log(email)
         try {
          const user =await userModel.findOne({email : email})
           if(user.otp_verified){

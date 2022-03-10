@@ -1,0 +1,54 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<style>
+    .table{
+        overflow-x: scroll;
+        display: inline-block;
+    }
+    .td{
+        border: 1px solid gray;
+    }
+</style>
+
+<section>
+    <table class="table border-collapse border border-slate-400">
+        <thead>
+            <tr>
+                <td class="td" >Name</td>
+                <td class="td" >Email</td>
+                <td class="td" >Phone</td>
+                <td class="td" >Word Count</td>
+                <td class="td" >Service</td>
+                <td class="td" >Description</td>
+                <td class="td" >Delivery Date</td>
+                <td class="td" >Status</td>
+                <td class="td" >Actions</td>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <% if(pending_orders){pending_orders.forEach(order => { %>
+               <tr>
+                  <td class="td"><%= order.name %></td>
+                  <td class="td"><%= order.email %></td>
+                  <td class="td"><%= order.phone %></td>
+                  <td class="td"><%= order.words %></td>
+                  <td class="td"><%= order.service %></td>
+                  <td class="td"><%= order.comment %></td>
+                  <td class="td"><%= order.delivery_date %></td>
+                  <td class="td"><%= order.status %></td>
+                  <td class="td">
+                      <a href="/user/admin/reject-order/<%= order._id %>"  class="py-1 px-2 font-bold text-white bg-red-500 mr-1">Reject</a>
+                      <a href="/user/admin/accept-order/<%= order._id %>"  class="py-1 px-2 font-bold text-white mt-2 bg-green-500 mr-1">Accept</a>
+                    </td>
+                </tr>
+                <% }) }%>
+        </tbody>
+    </table>
+</section>
+
+
+<%- include('../partials/footer.ejs') %>
+
+

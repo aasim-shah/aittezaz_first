@@ -1,14 +1,15 @@
 <%- include('../partials/header.ejs') %>
 <%- include('../partials/navbar.ejs') %>
 
-<div class="mx-auto w-68" >
+<div class="w-60 mx-auto text-center" >
+    <p class="text-sm text-gray-500 text-center">Add New Product</p>
     <form action="/user/admin/add_product" method="post" enctype="multipart/form-data">
-        <input type="text"class=" border_bb px-2 py-2  " placeholder="Product Name " name="name">
-        <input type="text" class=" border_bb px-2 py-2 mt-2  " placeholder="Description" name="desc">
-        <input type="number" class=" border_bb px-2 py-2 mt-2 " placeholder="Price" name="price">
-        <input type="text" class=" border_bb px-2 py-2 mt-2  " placeholder="Category" name="category">
-        <input type="file" class=" px-2 py-2 mt-2  "  name="product_image">
-        <input type="file" class=" px-2 py-2 mt-2  "  name="images" multiple>
+        <input type="text" class=" w-60  border_bb px-2 py-2  " placeholder="Product Name " name="name">
+        <input type="text"  class=" w-60  border_bb px-2 py-2 mt-2  " placeholder="Description" name="desc">
+        <input type="number"  class=" w-60  border_bb px-2 py-2 mt-2 " placeholder="Price" name="price">
+        <input type="text"  class=" w-60  border_bb px-2 py-2 mt-2  " placeholder="Category" name="category">
+        <input type="file"  class=" w-60  px-2 py-2 mt-2  "  name="product_image">
+        <input type="file"  class=" w-60  px-2 py-2 mt-2  "  name="images" multiple>
        <div class="d-flex justify-content-center my-4 ">
         <button type="submit" class="font-bold text-white text-lg px-3 theme-color rounded-full">ADD</button>
        </div>

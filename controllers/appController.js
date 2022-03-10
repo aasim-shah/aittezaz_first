@@ -3,6 +3,7 @@ import  Jwt  from 'jsonwebtoken';
 import cookieParser from "cookie-parser";
 import orderModel from "../models/orderModel.js";
 import contactModel from "../models/contactModel.js";
+import blogModel from "../models/blogModel.js";
 import subscribersModel from "../models/subscribersModel.js";
 import bcrypt from 'bcrypt'
 import {transporter , generateOtp} from '../middlewares/nodemailer.js'
@@ -36,7 +37,7 @@ class apps {
                 }else{
                    console.log('sent')
                 }
-              });
+              }); 
             res.render('otp' , {email : req.body.email})
          }else{
              res.redirect('back')
@@ -70,17 +71,18 @@ class apps {
         res.render('placeorder' , {msg : null})
      }
      async  postOrder(req ,res) {
-       const {name , email , phone , comment ,service , pages , delivery_date} = req.body;
+       const {name , email , phone , comment ,service , words , delivery_date} = req.body;
       const data = new orderModel({
           name,
           email,
           phone,
           comment,
           service,
-          pages,
+          words,
             delivery_date
       })
       const saved_data = await data.save()
+      console.log(saved_data);
       res.render('placeorder' , {msg : true})
      }
       async  get_otp_post(req ,res) {
@@ -137,7 +139,12 @@ class apps {
      }
  
      async  dashboard_get(req ,res) {
-         res.send('dashboard')
+       const orders = await orderModel.find({email : req.user.email})
+       if(orders){
+        res.status(200).render('dashboard' , {orders : orders})
+        }else{
+          res.status(200).render('dashboard' , {orders : null})
+       }
     //    res.render('home')
      }
 

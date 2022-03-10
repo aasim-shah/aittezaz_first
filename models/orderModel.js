@@ -7,7 +7,8 @@ const orderSchema = mongoose.Schema({
     phone : {type : Number },
     service : String,
     comment : String,
-    pages :{type : Number , default : 1},
+    status : {type : String , default : "pending"},
+    words :{type : String , default : "1"},
     delivery_date : Date,
 })
 

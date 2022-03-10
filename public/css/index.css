@@ -26,6 +26,9 @@
 .owl-dots{
     display: none;
 }
+#btn:focus{
+outline:  none !important;
+}
 .scroll_x{
     overflow-x: scroll;
     scroll-behavior: smooth;
