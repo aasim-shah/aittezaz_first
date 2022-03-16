@@ -1,4 +1,4 @@
-import express , {urlencoded} from 'express'
+import express  from 'express'
 
 import ejs from 'ejs'
 import userRoute from './routes/user_route.js'
@@ -19,11 +19,9 @@ import cookieParser from 'cookie-parser';
 import multer from 'multer'
 import jwtAuth from './middlewares/jwtauth.js'
 const local = passportLocal.Strategy
-const instance = new Razorpay({
-  key_id : "rzp_test_IqpKKCt3Rb3DJQ",
-  key_secret : "o2STvxx3SZNKDUkVd5O0Dh8z"
-})
+
 const app = express()
+const { urlencoded } = express;
 let  auth = new jwtAuth()
 let  isAdmin = auth.isAdmin
 const Tokenauth  = auth.Tokenauth
