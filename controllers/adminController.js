@@ -2,8 +2,12 @@ import blogModel from '../models/blogModel.js';
 import userModel from '../models/userModel.js'
 import orderModel from '../models/orderModel.js'
 class AdminController {
-    home(req , res){
-       res.render('admin/home')
+ async   home(req , res){
+        const total_orders = await orderModel.count()
+        const pending_orders = await orderModel.count({status : "pending"})
+        const accepted_orders = await orderModel.count({status : "accepted"})
+        const rejected_orders = await orderModel.count({status : "rejected"})
+       res.render('admin/home' , {total_orders , pending_orders ,accepted_orders , rejected_orders})
     }
 
    async add_product_get(req , res){

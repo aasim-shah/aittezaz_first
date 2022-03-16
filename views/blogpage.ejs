@@ -3,33 +3,17 @@
 
         <div class="container mx-auto">
             <p class="border-l-4 px-2 font-bold my-2 border-red-700">Blog Posts</p>
-            <div class="cardd">
-                <p class="text-2xl">Blog POst title **** someting like josidjfoej sjdfjs *****
-                </p>
+            <% if(blogs){blogs.forEach(blog=> { %>
+
+            <div class="cardd mb-4">
+                <p class="text-2xl"><%= blog.title %></p>
                 <div class="img w-full my-2">
-                    <img src="images/1643472053592-23907521-26986545.jpg" alt="">
+                    <img src="<%= blog.image %>" alt="">
                 </div>
-                <p class="text-md">
-                   blog post desc something like  .........Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestias debitis nisi
-                   voluptas
-                   at dignissimos dolor quos architecto assumenda? Sunt, facere? Exercitationem.......</p>
+                <p class="text-md"><%= blog.desc %></p>
                 <hr>
             </div>
-
-            <div class="cardd mt-4">
-                <p class="text-2xl">Lorem ipsum dolor sit, amet consectetur  sdoifoe sdkjfe
-                </p>
-                <div class="img w-full my-2">
-                    <img src="images/1644947887011-482129040-instagram.png" alt="">
-                </div>
-                <p class="text-md">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestias debitis nisi
-                    voluptas
-                    at dignissimos dolor quos architecto assumenda? Sunt, facere? Exercitationem.</p>
-                <hr>
-            </div>
-
-
+<% })} %>
         </div>
 
 

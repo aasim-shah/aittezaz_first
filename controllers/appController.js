@@ -46,9 +46,11 @@ class apps {
      async  registered(req ,res) {
         res.render('register')
      }
+   
+     
      async  getBlog(req ,res) {
-        res.render('blogpage')
-     }
+      res.render('blog')
+   }
 
       async  getContact(req ,res) {
         res.render('contact')

@@ -1,4 +1,5 @@
 import express , {urlencoded} from 'express'
+
 import ejs from 'ejs'
 import userRoute from './routes/user_route.js'
 import apps from './controllers/appController.js'
@@ -61,7 +62,7 @@ app.use(session({
   secret: 'mysupersecret',
   resave: false,
   saveUninitialized: false,
-  store : MongoStore.create({mongoUrl : 'mongodb://localhost:27017/ecomm' , collectionName : 'sessions'}),
+  store : MongoStore.create({mongoUrl : 'mongodb://asim:Mardan8110@cluster0-shard-00-00.btwlh.mongodb.net:27017,cluster0-shard-00-01.btwlh.mongodb.net:27017,cluster0-shard-00-02.btwlh.mongodb.net:27017/Aittezaz?ssl=true&replicaSet=atlas-x564yd-shard-0&authSource=admin&retryWrites=true&w=majority' , collectionName : 'sessions'}),
   cookie: { maxAge : 1000 * 60 * 60 * 24 }
 }))
 app.use((req , res , next)=>{
