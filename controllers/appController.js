@@ -49,7 +49,8 @@ class apps {
    
      
      async  getBlog(req ,res) {
-      res.render('blog')
+       const blogs = await blogModel.find().sort({created_at : -1});
+      res.render('blogpage' , {blogs})
    }
 
       async  getContact(req ,res) {
@@ -134,7 +135,7 @@ class apps {
      async  login_post(req ,res) {
          const Token = await req.user.Authuser()
          res.cookie('jwt_Token' , Token )
-             res.redirect('dashboard')
+             res.redirect('/')
      }
      async  login_get(req ,res) {
        res.render('login')

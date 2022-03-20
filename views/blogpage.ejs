@@ -2,15 +2,15 @@
     <%- include('./partials/navbar.ejs') %>
 
         <div class="container mx-auto">
-            <p class="border-l-4 px-2 font-bold my-2 border-red-700">Blog Posts</p>
+            <p class="border-l-4 px-2 font-bold my-3 border-red-700">Blog Posts</p>
             <% if(blogs){blogs.forEach(blog=> { %>
 
-            <div class="cardd mb-4">
-                <p class="text-2xl"><%= blog.title %></p>
-                <div class="img w-full my-2">
+            <div class="cardd mb-2 py-2 mx-1 px-2 bg-gray-100  rounded-md" >
+                <div class="img w-full">
                     <img src="<%= blog.image %>" alt="">
                 </div>
-                <p class="text-md"><%= blog.desc %></p>
+                <p class="text-2xl text-dark mt-3 font-bold"><%= blog.title %></p>
+                <p class="text-md mt-2"><%= blog.desc %></p>
                 <hr>
             </div>
 <% })} %>

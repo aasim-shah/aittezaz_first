@@ -3,7 +3,7 @@ import  Jwt  from 'jsonwebtoken';
 import cookieParser from "cookie-parser";
 
 
-export const users = (app)=> {
+export default function users(app) {
     return ({
       home(req , res){
         res.send('users route')

@@ -1,108 +1,167 @@
 <%- include('./partials/header.ejs') %>
     <%- include('./partials/navbar.ejs') %>
-
-        <section>
-            <div class="hero_text grid grid-flow-row grid-cols-1 md:grid-cols-2 ">
-                <div class="main_text mt-5 bg-gray-100 py-4">
-                    <p class="text-yellow-600 text-center font-bold text-3xl">
-                        High Quality Custom Writing Service For Busy People
-                    </p>
-                </div>
-                <div class="hero_text">
-                    <div id="typed-strings " class=" bg-gray-100">
-                        <p class="font-bold text-3xl"></p>
-                        <p id="typed" class="font-bold text-3xl  text-center h-12 text-[#1b679b]"></p>
+        <div class="wrapper relative">
+            <a href="whatsapp://send?phone=+923144757721&text=https://penspowerr.com" class="whatsapp hidden  fixed"><i
+                    class="fa-brands fa-3x text-green-500 fa-whatsapp-square"></i></a>
+            <section>
+                <div class="hero_text grid grid-flow-row grid-cols-1 md:grid-cols-1 ">
+                    <div class="main_text mt-5 bg-gray-100 py-4">
+                        <p class="text-yellow-600 text-center font-bold text-3xl">
+                            High Quality Custom Writing Service For Busy People
+                        </p>
                     </div>
-                    <p class="text-lg text-center font-bold text-gray-500">why us ?</p>
+                    <div class="hero_text">
+                        <div id="typed-strings " class=" bg-gray-100">
+                            <p class="font-bold text-3xl"></p>
+                            <p id="typed" class="font-bold text-3xl  text-center h-12 text-[#1b679b]"></p>
+                        </div>
+                        <div class="get_started bg-gray-100  text-center">
+                            <a href="/place_order" class=" theme-color py-2 px-4 text-white font-bold rounded-md">Get
+                                Started</a>
+                        </div>
+                        <p class="text-lg text-center font-bold text-gray-500">why us ?</p>
+
+                    </div>
+
+            </section>
+            <div class="whyus grid grid-flow-coll container mx-auto grid-cols-4 gap-1 my-2">
+                <div class="card flex flex-col justify-center text-center rounded-md p-2">
+                    <span><i class="fa-solid fa-user-group fa-3x"></i></span>
+                    <span class="font-bold text-sm">Team work</span>
+                </div>
+                <div class="card flex flex-col justify-center text-center rounded-md p-2">
+                    <span><i class="fa-solid fa-arrow-rotate-left fa-3x"></i></span>
+                    <span class="font-bold text-sm">Efficency</span>
+                </div>
+                <div class="card flex flex-col justify-center text-center rounded-md p-2">
+                    <span><i class="fa-solid fa-chart-line fa-3x"></i></span>
+                    <span class="font-bold text-sm">Quality</span>
+                </div>
+                <div class="card flex flex-col justify-center text-center rounded-md p-2">
+                    <span><i class="fa-solid fa-headset fa-3x"></i></span>
+                    <span class="font-bold text-sm">LIVE Support</span>
+                </div>
+
+
+
+
+            </div>
+            <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
+                <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+                    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center "
+                        style="border-radius: 50%;">
+                        <i class="fa-solid fa-hand-holding-dollar text-white absolute icon_size"></i>
+                    </div>
+                    <p class="text-md font-bold text-center my-2 ">100% Refund Policy</p>
+                </div>
+                <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+                    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center"
+                        style="border-radius: 50%;">
+                        <i class="fa-solid fa-list-check text-white absolute icon_size"></i>
+                    </div>
+                    <p class="text-md font-bold text-center my-2 ">100% Genuen Writing</p>
+                </div>
+
+                <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
+                    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center"
+                        style="border-radius: 50%;">
+                        <i class="fa-solid fa-headset text-white absolute icon_size"></i>
+                    </div>
+                    <p class="text-md font-bold text-center my-2 ">24/7 Customer Support</p>
+                </div>
+
+                <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  " id="ourservices">
+                    <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center"
+                        style="border-radius: 50%;">
+                        <i class="fa-solid fa-recycle text-white absolute icon_size"></i>
+                    </div>
+                    <p class="text-md font-bold text-center my-2 ">Free Revisions</p>
+                </div>
+
+
+            </section>
+
+
+            <section class="services my-4">
+                <h2 class="text-blue-400 text-center my-3">OUR SERVICES</h2>
+                <div class="flex flex-col  container mx-auto">
+                    <div class="text-center w-full h-12 left_anim">
+                        <a href="/services/blog-post"
+                            class="py-2 px-4 theme-color text-white font-bold  rounded-md ">BLOG
+                            POSTS</a>
+                    </div>
+
+                    <div class="text-center w-full h-12 right_anim">
+                        <a href="/services/research"
+                            class="py-2 px-4 theme-color text-white font-bold  rounded-md">RESEARCH</a>
+                        <a href="/services/case-study"
+                            class="py-2 px-4 theme-color text-white font-bold  rounded-md">CASE STUDY</a>
+                    </div>
+
+                    <div class="text-center w-full h-12 left_anim">
+                        <a href="/services/essay"
+                            class="py-2 px-[51px] theme-color text-white font-bold  rounded-md">ESSAY</a>
+                        <a href="/services/thesis"
+                            class="py-2 px-[51px] theme-color text-white font-bold  rounded-md">THESIS</a>
+                    </div>
+                    <div class="text-center w-full h-12 right_anim">
+                        <a href="/services/article"
+                            class="py-2 px-4 theme-color text-white font-bold  rounded-md">ARTICLES</a>
+                        <a href="/services/post-content"
+                            class="py-2 px-4 theme-color text-white font-bold  rounded-md">POST
+                            CONTENT</a>
+                    </div>
+
+                    <div class="text-center w-full h-12 left_anim">
+                        <a href="/services/assignment"
+                            class="py-2 px-4 theme-color text-white font-bold rounded-md">ASSIGNMENTS</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
+                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                    style="background-color: rgb(4, 82, 134);">
+                    <div class=" py-2 mx-auto w-28 text-center">
+                        <img src="/images/used/1.png" alt="">
+                    </div>
+                    <p class="text-md font-bold text-white text-center my-2 px-4 ">Fill Out All The Requirement And
+                        Place Your Order</p>
+                    <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
+                    <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
+                </div>
+
+
+                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                    style="background-color: rgb(4, 82, 134);">
+                    <div class=" py-2 mx-auto w-28 text-center">
+                        <img src="/images/used/2.png" alt="">
+                    </div>
+                    <p class="text-md font-bold text-white text-center my-2 px-4">Discuss With Our Support Team And
+                        Proceed With Payment</p>
+                    <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
+                    <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
+                </div>
+                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                    style="background-color: rgb(4, 82, 134);">
+                    <div class=" py-2 mx-auto w-28 text-center">
+                        <img src="/images/used/3.png" alt="">
+                    </div>
+                    <p class="text-md font-bold text-white text-center my-2 px-4">Quality Checkup (Grammar Mistakes,
+                        Plagiarism)</p>
+                    <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
+                    <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
+                </div>
+                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                    style="background-color: rgb(4, 82, 134);">
+                    <div class=" py-2 mx-auto w-28 text-center">
+                        <img src="/images/used/4.png" alt="">
+                    </div>
+                    <p class="text-md font-bold text-white text-center my-2 px-4">ORDER DELIVERY</p>
 
                 </div>
-                <div class="logo">
-                    <h1 class="hidden md:flex">hellow bro</h1>
-                </div>
-        </section>
-        <div class="whyus grid grid-flow-coll container mx-auto grid-cols-4 gap-1 my-2">
-            <div class="card flex flex-col text-center rounded-md p-2 pt-2">
-                <span><i class="fa-solid fa-user-group fa-3x"></i></span>
-                <span class="font-bold text-sm">Team work</span>
-            </div>
-            <div class="card flex flex-col justify-center text-center rounded-md p-2">
-                <span><i class="fa-solid fa-arrow-rotate-left fa-3x"></i></span>
-                <span class="font-bold text-sm">Efficency</span>
-            </div>
-            <div class="card flex flex-col justify-center text-center rounded-md p-2">
-                <span><i class="fa-solid fa-chart-line fa-3x"></i></span>
-                <span class="font-bold text-sm">Quality</span>
-            </div>
-            <div class="card flex flex-col justify-center text-center rounded-md p-2">
-                <span><i class="fa-solid fa-headset fa-3x"></i></span>
-                <span class="font-bold text-sm">LIVE Support</span>
-            </div>
-
-
-
-           
+            </section>
         </div>
-        <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
-            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
-                    <i class="fa-solid fa-hand-holding-dollar text-white absolute icon_size"></i>
-                </div>
-                <p class="text-md font-bold text-center my-2 ">100% Refund Policy</p>
-            </div>
-            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
-                    <i class="fa-solid fa-list-check text-white absolute icon_size"></i>
-                </div>
-                <p class="text-md font-bold text-center my-2 ">100% Genuen Writing</p>
-            </div>
-
-            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
-                    <i class="fa-solid fa-headset text-white absolute icon_size"></i>
-                </div>
-                <p class="text-md font-bold text-center my-2 ">24/7 Customer Support</p>
-            </div>
-
-            <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
-                <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center" style="border-radius: 50%;">
-                    <i class="fa-solid fa-recycle text-white absolute icon_size"></i>
-                </div>
-                <p class="text-md font-bold text-center my-2 ">Free Revisions</p>
-            </div>
-
-
-        </section>
-
-
-        <section class="services my-4">
-            <h2 class="text-blue-400 text-center my-3">OUR SERVICES</h2>
-            <div class="flex flex-col  container mx-auto">
-                <div class="text-center w-full h-12">
-                    <a href="/services/blog-post" class="py-2 px-4 theme-color text-white font-bold  rounded-md ">BLOG
-                        POSTS</a>
-                </div>
-
-                <div class="text-center w-full h-12">
-                    <a href="/services/research" class="py-2 px-4 theme-color text-white font-bold  rounded-md">RESEARCH</a>
-                    <a href="/services/case-study" class="py-2 px-4 theme-color text-white font-bold  rounded-md">CASE STUDY</a>
-                </div>
-
-                <div class="text-center w-full h-12">
-                    <a href="/services/essay" class="py-2 px-[51px] theme-color text-white font-bold  rounded-md">ESSAY</a>
-                    <a href="/services/thesis"
-                        class="py-2 px-[51px] theme-color text-white font-bold  rounded-md">THESIS</a>
-                </div>
-                <div class="text-center w-full h-12">
-                    <a href="/services/article" class="py-2 px-4 theme-color text-white font-bold  rounded-md">ARTICLES</a>
-                    <a href="/services/post-content" class="py-2 px-4 theme-color text-white font-bold  rounded-md">POST
-                        CONTENT</a>
-                </div>
-
-                <div class="text-center w-full h-12">
-                    <a href="/services/assignment" class="py-2 px-4 theme-color text-white font-bold rounded-md">ASSIGNMENTS</a>
-                </div>
-            </div>
-        </section>
         <%- include('./partials/footer.ejs') %>
             <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
             <script>

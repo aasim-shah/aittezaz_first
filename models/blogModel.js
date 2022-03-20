@@ -6,7 +6,8 @@ const blogSchema = mongoose.Schema({
     desc : String ,
     image : String,
     likes : Number ,
-    comments : Number
+    comments : Number,
+    created_at : {type : Date , default : Date.now()}
    
 })
 

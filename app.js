@@ -1,5 +1,4 @@
 import express  from 'express'
-
 import ejs from 'ejs'
 import userRoute from './routes/user_route.js'
 import apps from './controllers/appController.js'

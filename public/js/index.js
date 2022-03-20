@@ -14,4 +14,7 @@ $( document ).ready(function() {
         $("#toggle_nav").toggle()
 
     })
+    setTimeout(() => {
+        $('.whatsapp').css({display: "block"})
+    }, 5000);
 });

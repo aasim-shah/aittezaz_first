@@ -23,6 +23,45 @@
     border: 1px solid rgba(0, 0, 0, 0.541);
     transition: all 0.5;
 }
+.whatsapp{
+    left: 20px;
+    bottom: 20px;
+    z-index: 44;
+}
+.get_started{
+    scroll-behavior: smooth;
+    animation: get_start 2s ease-in-out;
+    animation-delay: 1s;
+    padding: 12px 0px;
+    
+}
+@keyframes get_start {
+    0%   {padding-top: 25%;}
+    100% {padding-top: 12px;}
+    }
+    .left_anim{
+    scroll-behavior: smooth;
+    animation: left_anim 2s ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    
+    }
+    @keyframes left_anim {
+    0%   {margin-left: -5px;}
+    50% {margin-left: 0px;}
+    100% {margin-left: -5px;}
+    }
+    .right_anim{
+    scroll-behavior: smooth;
+    animation: right_anim 2s ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes right_anim {
+    0%   {margin-left: 5px;}
+    50% {margin-left: 0px;}
+    100% {margin-left: 5px;}
+    }
 .owl-dots{
     display: none;
 }
