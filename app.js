@@ -120,6 +120,7 @@ app.get('/services/research', service.getResearch)
 app.get('/services/thesis', service.getThesis)
 
 
+app.get('/my_orders'  ,Tokenauth , home.getMyOrders)
 
 app.get('/place_order'  , home.getOrder)
 app.post('/place_order'  , home.postOrder)

@@ -4,12 +4,16 @@ import cookieParser from "cookie-parser";
 import orderModel from "../models/orderModel.js";
 import contactModel from "../models/contactModel.js";
 import blogModel from "../models/blogModel.js";
+import authorModel from "../models/authorModel.js";
 import subscribersModel from "../models/subscribersModel.js";
 import bcrypt from 'bcrypt'
-import {transporter , generateOtp} from '../middlewares/nodemailer.js'
+import moment from "moment";
+
+import {transporter , generateOtp , OrderPlaced} from '../middlewares/nodemailer.js'
 class apps {
      async   home(req ,res) {
-      res.render('newhome')
+      const authors = await authorModel.find();
+      res.render('newhome' , {authors})
     }
     async  registering(req ,res) {
        const {username , email , password} = req.body;
@@ -25,7 +29,7 @@ class apps {
          const regtoken = await data.Authuser()
          if(registed){
             let   mailOptions = {
-                from: 'mernstackdevv@gmail.com',
+                from: "mernstackdevv@gmail.com",
                 to: req.body.email, 
                 subject: 'Confirm you Email Account',
                 text: otp
@@ -73,6 +77,13 @@ class apps {
      async  getOrder(req ,res) {
         res.render('placeorder' , {msg : null})
      }
+
+     async  getMyOrders(req ,res) {
+      const orders = await orderModel.find({email : req.user.email})
+      console.log(orders)
+      res.render('myorders' , {orders , moment})
+   }
+
      async  postOrder(req ,res) {
        const {name , email , phone , comment ,service , words , delivery_date} = req.body;
       const data = new orderModel({
@@ -86,12 +97,13 @@ class apps {
       })
       const saved_data = await data.save()
       console.log(saved_data);
+      OrderPlaced(name , email , service);
       res.render('placeorder' , {msg : true})
      }
       async  get_otp_post(req ,res) {
         let otp = generateOtp()
         let   mailOptions = {
-            from: 'mernstackdevv@gmail.com',
+            from: "mernstackdevv@gmail.com",
             to: req.body.email, 
             subject: 'Confirm you Email Account',
             text: otp

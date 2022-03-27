@@ -1,0 +1,35 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+    <section class="my-3 " style="overflow-x: scroll;">
+        <table class="table-auto border-collapse border border-slate-400 text-center">
+            <thead>
+              <tr>
+                <th class="border border-slate-400 px-2 mx-1">Name</th>
+                <th class="border border-slate-400 px-2 mx-1">Email</th>
+                <th class="border border-slate-400 px-2 mx-1">Service</th>
+                <th class="border border-slate-400 px-2 mx-1">Words Count </th>
+                <th class="border border-slate-400 px-2 mx-1">Ordered At</th>
+                <th class="border border-slate-400 px-2 mx-1">Delivery Date</th>
+                <th class="border border-slate-400 px-2 mx-1">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(orders){orders.forEach(order => { %>
+                <tr>
+                    <td class="border border-slate-400 px-2 mx-1"><%= order.name %></td>
+                   <td class="border border-slate-400 px-2 mx-1"><%= order.email %></td>
+                   <td class="border border-slate-400 px-2 mx-1"><%= order.service %></td>
+                   <td class="border border-slate-400 px-2 mx-1"><%= order.words %></td>
+                   <td class="border border-slate-400 px-2 mx-1"><%=  moment(order.created_at).format( 'hh:mm:a , MMM DD YYYY') %></td>
+                   <td class="border border-slate-400 px-2 mx-1"><%= moment(order.delivery_date).format( 'hh:mm:a , MMM DD YYYY') %></td>
+                   <td class="border border-slate-400 px-2 mx-1"><%= order.status %></td>
+                   </tr>
+
+                <% })} %>
+            </tbody>
+          </table>
+    </section>
+
+<%- include('./partials/footer.ejs') %>
+
+

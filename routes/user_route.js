@@ -42,6 +42,8 @@ router.get('/admin/rejected-orders' ,Tokenauth, isAdmin , admin.getRejectedOrder
 router.get('/admin/pending-orders' ,Tokenauth, isAdmin , admin.getPendingOrders)
 router.get('/admin/add-blog' ,Tokenauth, isAdmin , admin.add_blog_get)
 router.post('/admin/add-blog', upload.single('image'), admin.add_blog_post)
+router.get('/admin/add-author' ,Tokenauth, isAdmin , admin.add_author_get)
+router.post('/admin/add-author' ,upload.single('image'), admin.add_author_post)
 router.post('/admin/add_product', upload.single('product_image'), upload.array('images' , 10) , admin.add_product_post)
 
 export default router;

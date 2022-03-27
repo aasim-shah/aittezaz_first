@@ -27,6 +27,19 @@
     left: 20px;
     bottom: 20px;
     z-index: 44;
+    animation: whatsapp 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes whatsapp{
+0%{opacity: 100%;}
+28%{opacity: 100%;}
+29%{opacity: 2%;}
+30%{opacity: 100%;}
+31%{opacity: 2%;}
+32%{opacity: 100%;}
+36%{opacity: 2%;}
+40%{opacity: 100%;}
+100%{opacity: 100%;}
 }
 .get_started{
     scroll-behavior: smooth;
@@ -64,6 +77,11 @@
     }
 .owl-dots{
     display: none;
+}
+.form_center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #btn:focus{
 outline:  none !important;

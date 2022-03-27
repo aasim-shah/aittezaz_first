@@ -1,7 +1,7 @@
 <%- include('./partials/header.ejs') %>
     <%- include('./partials/navbar.ejs') %>
         <div class="wrapper relative">
-            <a href="whatsapp://send?phone=+923144757721&text=https://penspowerr.com" class="whatsapp hidden  fixed"><i
+            <a href="whatsapp://send?phone=+923179602664&text=Hi There! How Can i Help You ?" class="whatsapp hidden  fixed"><i
                     class="fa-brands fa-3x text-green-500 fa-whatsapp-square"></i></a>
             <section>
                 <div class="hero_text grid grid-flow-row grid-cols-1 md:grid-cols-1 ">
@@ -46,7 +46,7 @@
 
 
             </div>
-            <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
+            <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 lg:grid-cols-4 ">
                 <div class="card bg-white my-2  border  w-full mx-auto rounded-md hover:px-2  ">
                     <div class=" p-2 theme-color mt-2 relative w-32 h-32 mx-auto text-center "
                         style="border-radius: 50%;">
@@ -83,8 +83,8 @@
 
 
             <section class="services my-4">
-                <h2 class="text-blue-400 text-center my-3">OUR SERVICES</h2>
-                <div class="flex flex-col  container mx-auto">
+                <p class="text-xl font-[800] my-4 text-[#1b679b] text-center">OUR SERVICES</p>            
+                    <div class="flex flex-col  container mx-auto">
                     <div class="text-center w-full h-12 left_anim">
                         <a href="/services/blog-post"
                             class="py-2 px-4 theme-color text-white font-bold  rounded-md ">BLOG
@@ -120,7 +120,8 @@
             </section>
 
             <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
-                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                <p class="text-xl font-[800] mb-2 text-white text-center">How Does It Works !</p>
+                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
                         <img src="/images/used/1.png" alt="">
@@ -132,7 +133,7 @@
                 </div>
 
 
-                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
                         <img src="/images/used/2.png" alt="">
@@ -142,7 +143,7 @@
                     <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
                     <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
                 </div>
-                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
                         <img src="/images/used/3.png" alt="">
@@ -152,7 +153,7 @@
                     <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
                     <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
                 </div>
-                <div class="card  my-2  py-3   w-64 mx-auto rounded-md hover:px-2  "
+                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
                         <img src="/images/used/4.png" alt="">
@@ -161,6 +162,29 @@
 
                 </div>
             </section>
+            <% if(authors){ %>
+                <section class="authors my-3">
+                    <p class="text-xl font-[800] mb-2 text-[#1b679b] text-center">OUR AUTHORS</p>
+                    <div id="owl-one" class="owl-carousel  owl-theme w-11/12 mx-auto">
+                        <% authors.forEach(author=>{ %>
+                        <div class="theme-color ml-2 rounded-sm py-2 h-80">
+                            <div class="img w-40 h-40 mb-3 text-center items-center mx-auto">
+                                <img src="<%= author.image %>" class="w-full" alt="">
+                            </div>
+                            <div class="name_ratings flex px-3 mt-auto my-2 flex-row justify-between">
+                                <span class="text-lg font-bold text-white"><%= author.name %> </span>
+                                <span class="text-sm text-white pr-3 mt-2"><%= author.education %></span>
+                                
+                            </div>
+                            <div class="desc">
+                                <p class="short_desc pl-3 pr-2 text-white ">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <%= author.desc %></p>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </section>
+                <% } %>
         </div>
         <%- include('./partials/footer.ejs') %>
             <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -180,4 +204,26 @@
                     backSpeed: 80,
                     loop: true
                 });
-            </script>
+            </script> 
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#owl-one').owlCarousel({
+            loop:true,
+    // margin:10,
+    // nav:true,
+            responsive: {
+                0: {
+                    items: 1.2
+                },
+                600: {
+                    items: 4
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    });
+</script>

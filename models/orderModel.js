@@ -9,6 +9,7 @@ const orderSchema = mongoose.Schema({
     comment : String,
     status : {type : String , default : "pending"},
     words :{type : String , default : "1"},
+    created_at : {type : Date , default : Date.now()},
     delivery_date : Date,
 })
 

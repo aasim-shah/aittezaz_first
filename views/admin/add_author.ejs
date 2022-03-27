@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<div class="w-60 mx-auto text-center" >
+    <p class="text-sm text-center text-gray-400 my-2">Add New Author</p>
+    <form action="/user/admin/add-author" method="post" enctype="multipart/form-data">
+        <input type="text" class=" border_bb w-60 px-2 py-2  " placeholder="Name " name="name">
+        <input type="text" class=" border_bb w-60 px-2 py-2 mt-2  " placeholder="Education" name="education">
+        <input type="text" class=" border_bb w-60 px-2 py-2 mt-2  " placeholder="Description" name="desc">
+        <input type="file" class=" border_bb px-2 py-2 mt-2 w-60 "  name="image">
+        <button type="submit" class="font-bold mt-3 text-white text-lg px-3 theme-color rounded-full">Add Author</button>
+     
+    </form>
+</div>
+
+
+
+<%- include('../partials/footer.ejs') %>
+
+

@@ -1,6 +1,7 @@
 import blogModel from '../models/blogModel.js';
 import userModel from '../models/userModel.js'
 import orderModel from '../models/orderModel.js'
+import authorModel from '../models/authorModel.js'
 class AdminController {
  async   home(req , res){
         const total_orders = await orderModel.count()
@@ -67,6 +68,22 @@ class AdminController {
         })
 
         const added = await blog_data.save()
+        res.redirect('back')
+    }
+    async add_author_get(req , res){
+        res.render('admin/add_author')
+    }
+
+    async add_author_post(req , res){
+        const {name , education , desc} = req.body;
+        const author_data = new authorModel({
+           name,
+           education,
+           desc,
+            image :'images/'+req.file.filename
+        })
+
+        const added = await author_data.save()
         res.redirect('back')
     }
    async add_product_post(req , res){
