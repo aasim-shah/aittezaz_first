@@ -5,8 +5,8 @@ export const   transporter  = nodemailer.createTransport({
       debug: true,
     },
         auth: {
-            user: "mernstackdevv@gmail.com",
-            pass: "mardan8110"
+            user: "penspowerr@gmail.com",
+            pass: "mardan1122"
         }
     });
   // verify connection configuration
