@@ -106,7 +106,8 @@ app.post('/contact', home.postContact);
 app.get('/register', home.registered);
 app.post('/register', home.registering);
 app.get('/login', home.login_get);
-app.post('/login' , passport.authenticate('local', { failureRedirect: 'login' }),
+app.get('/loginFailed', home.login_Failed);
+app.post('/login' , passport.authenticate('local', { failureRedirect: '/loginFailed' }),
 home.login_post
 );
 app.get('/services', service.home)

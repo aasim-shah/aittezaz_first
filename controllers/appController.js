@@ -78,6 +78,11 @@ class apps {
         res.render('placeorder' , {msg : null})
      }
 
+
+     async  login_Failed(req ,res) {
+      res.render('login' , {msg : "Email or Password Incorrect ! Please try again :)"})
+   }
+
      async  getMyOrders(req ,res) {
       const orders = await orderModel.find({email : req.user.email})
       console.log(orders)
@@ -147,10 +152,13 @@ class apps {
      async  login_post(req ,res) {
          const Token = await req.user.Authuser()
          res.cookie('jwt_Token' , Token )
+         if(req.user.isAdmin){
+          return res.redirect('/user/admin')
+        }
              res.redirect('/')
      }
      async  login_get(req ,res) {
-       res.render('login')
+       res.render('login' , {msg : null})
      }
  
      async  dashboard_get(req ,res) {

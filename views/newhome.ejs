@@ -178,17 +178,17 @@
                     <p class="text-xl font-[800] mb-2 text-[#1b679b] text-center">OUR AUTHORS</p>
                     <div id="owl-one" class="owl-carousel  owl-theme w-11/12 mx-auto">
                         <% authors.forEach(author=>{ %>
-                        <div class="theme-color ml-2 rounded-sm py-2 h-80">
-                            <div class="img mb-3  w-40 h-40  text-center items-center mx-auto">
-                                <img src="<%= author.image %>" class=" w-40 h-40  w-full rounded-full"  alt="">
+                        <div class="theme-color ml-2 rounded-sm py-2 h-96">
+                            <div class="img mb-3  w-32 h-32 m-3 text-center items-center mx-auto">
+                                <img src="<%= author.image %>" class=" w-32 h-32  w-full rounded-full"  alt="">
                             </div>
                             <div class="name_ratings flex px-3 mt-auto my-2 flex-row justify-between">
                                 <span class="text-lg font-bold text-white"><%= author.name %> </span>
                                 <span class="text-sm text-white pr-3 mt-2"><%= author.education %></span>
                                 
                             </div>
-                            <div class="desc">
-                                <p class="short_desc pl-3 pr-2 text-white ">
+                            <div class="desc ">
+                                <p class="short_desc text-white px-2">
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <%= author.desc %></p>
                             </div>
                         </div>

@@ -1,3 +1,4 @@
+import { query } from "express"
 import Jwt from "jsonwebtoken"
 import userModel from "../models/userModel.js"
 
@@ -21,6 +22,7 @@ class jwtAuth {
           const verfiy =  Jwt.verify(token , 'mysupersecret')
           const verfified_user = await userModel.findById(verfiy._id)
           req.user = verfified_user ;
+         
          next()
         } catch (error) {
           console.log(error)
