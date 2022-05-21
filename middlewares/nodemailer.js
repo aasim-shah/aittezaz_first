@@ -31,7 +31,7 @@ export const generateOtp = ()=> {
 export const OrderPlaced  = (name , email ,service)=>{
     let   sentToAdmin = {
         from: 'penspowerr@gmail.com',
-        to: 'asimshah8110@gmail.com', 
+        to: 'copywritingservice03@gmail.com', 
         subject: `${name} Placed a New Order For ${service}`,
         text: `A New order from   ${name}  : ${email}  is placed for  ${service}`
     }
