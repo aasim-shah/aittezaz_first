@@ -1,4 +1,3 @@
-import { query } from "express"
 import Jwt from "jsonwebtoken"
 import userModel from "../models/userModel.js"
 
