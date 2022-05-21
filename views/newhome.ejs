@@ -118,10 +118,10 @@
                     </div>
                 </div>
             </section>
-
+            
+            <p class="text-xl font-[800] mb-2 text-dark text-center">How Does It Works !</p>
             <section class="cards theme-color gap-1 grid container py-2 grid-flow-row grid-cols-1 md:grid-cols-4 ">
-                <p class="text-xl font-[800] mb-2 text-white text-center">How Does It Works !</p>
-                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
+                <div class="card  my-2  py-3    mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
                         <img src="/images/used/1.png" alt="">
@@ -133,7 +133,7 @@
                 </div>
 
 
-                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
+                <div class="card  my-2  py-3    mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
                         <img src="/images/used/2.png" alt="">
@@ -143,7 +143,7 @@
                     <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
                     <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
                 </div>
-                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
+                <div class="card  my-2  py-3    mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
                         <img src="/images/used/3.png" alt="">
@@ -153,14 +153,25 @@
                     <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
                     <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
                 </div>
-                <div class="card  my-2  py-3   w-80 mx-auto rounded-md hover:px-2  "
+
+                <div class="card  my-2  py-3 px-24    mx-auto rounded-md hover:px-2  "
+                style="background-color: rgb(4, 82, 134);">
+                <div class=" py-2 mx-auto w-28 text-center">
+                    <img src="/images/used/4.png" alt="">
+                </div>
+                <p class="text-md font-bold text-white text-center my-2 px-4">ORDER DELIVERY</p>
+                <div class="justify-center text-white flex md:hidden"><i class="fa-solid fa-angle-down"></i></div>
+                <div class="justify-center text-white hidden md:flex"><i class="fa-solid fa-right-long"></i></div>
+            </div>
+
+                <!-- <div class="card  my-2  py-3    mx-auto rounded-md hover:px-2  "
                     style="background-color: rgb(4, 82, 134);">
                     <div class=" py-2 mx-auto w-28 text-center">
-                        <img src="/images/used/4.png" alt="">
+                        z
                     </div>
                     <p class="text-md font-bold text-white text-center my-2 px-4">ORDER DELIVERY</p>
 
-                </div>
+                </div> -->
             </section>
             <% if(authors){ %>
                 <section class="authors my-3">
@@ -168,8 +179,8 @@
                     <div id="owl-one" class="owl-carousel  owl-theme w-11/12 mx-auto">
                         <% authors.forEach(author=>{ %>
                         <div class="theme-color ml-2 rounded-sm py-2 h-80">
-                            <div class="img w-40 h-40 mb-3 text-center items-center mx-auto">
-                                <img src="<%= author.image %>" class="w-full" alt="">
+                            <div class="img mb-3  w-40 h-40  text-center items-center mx-auto">
+                                <img src="<%= author.image %>" class=" w-40 h-40  w-full rounded-full"  alt="">
                             </div>
                             <div class="name_ratings flex px-3 mt-auto my-2 flex-row justify-between">
                                 <span class="text-lg font-bold text-white"><%= author.name %> </span>
