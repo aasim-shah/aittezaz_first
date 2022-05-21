@@ -29,7 +29,7 @@ class apps {
          const regtoken = await data.Authuser()
          if(registed){
             let   mailOptions = {
-                from: "mernstackdevv@gmail.com",
+                from: "penspowerr@gmail.com",
                 to: req.body.email, 
                 subject: 'Confirm you Email Account',
                 text: otp
@@ -108,7 +108,7 @@ class apps {
       async  get_otp_post(req ,res) {
         let otp = generateOtp()
         let   mailOptions = {
-            from: "mernstackdevv@gmail.com",
+            from: "penspowerr@gmail.com",
             to: req.body.email, 
             subject: 'Confirm you Email Account',
             text: otp
